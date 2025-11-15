@@ -2,7 +2,7 @@ package practice2;
 
 
 public class Main {
-    static void main(String[] args) {
+    public static void main(String[] args) {
 
         Car someCar = new Car("Audi", 2006);
 

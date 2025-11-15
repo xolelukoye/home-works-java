@@ -8,7 +8,7 @@ public class Circle {
         this.radius = someRadius;
     }
 
-    int detRadius() {
+    int getRadius() {
         return this.radius;
     }
 
