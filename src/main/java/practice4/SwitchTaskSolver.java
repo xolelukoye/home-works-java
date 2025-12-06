@@ -18,7 +18,7 @@ public class SwitchTaskSolver {
         // commandProcessing();
 
         // проверка калькулятора
-        // calculate();
+        calculate();
 
     }
 
@@ -129,21 +129,25 @@ public class SwitchTaskSolver {
         String operator = scanner.nextLine();
         int result = 0;
 
-        if (b == 0) {
-            System.out.println("На ноль делить нельзя!");
-        } else {
             switch (operator) {
                 case "+" -> result = (a + b);
                 case "-" -> result = (a - b);
-                case "/" -> result = (a / b);
+                case "/" -> {
+                    if (b == 0) {
+                        System.out.println("На ноль делить нельзя!");
+                        scanner.close();
+                        return;
+                    }
+                    result = (a / b);
+                }
                 case "*" -> result = (a * b);
                 default -> {
                     System.out.println("Неверный оператор!");
+                    scanner.close();
                     return;
                 }
-            }
-            System.out.println("Ответ: " + result);
         }
+        System.out.println("Ответ: " + result);
         scanner.close();
     }
 }

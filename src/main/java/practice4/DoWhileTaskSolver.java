@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class DoWhileTaskSolver {
 
-    static void main(String[] args) {
+    public static void main(String[] args) {
 
         // проверка запроса позитивного числа
         // positiveNumber();
@@ -86,8 +86,6 @@ public class DoWhileTaskSolver {
 
         if (number == 0) {
             count = 1;
-        } else {
-            count = 0;
         }
 
         do {

@@ -118,7 +118,7 @@ public class IfElseTaskSolver {
         if (age < 18) {
             System.out.println("Размер скидки составляет: 25%");
         }
-        if (age >= 65) {
+        else if (age >= 65) {
             System.out.println("Размер скидки составляет: 30%");
         }
         else {
