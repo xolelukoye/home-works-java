@@ -30,8 +30,6 @@ public class Task1 {
         System.out.println("Введите число: ");
         Integer setNumber = scanner.nextInt();
 
-        scanner.close();
-
         Integer higher = set.higher(setNumber);
         Integer lower = set.lower(setNumber);
 
@@ -46,6 +44,8 @@ public class Task1 {
         } else {
             System.out.println("Введенное значение является минимальным в данном множестве");
         }
+
+        scanner.close();
     }
 
 }

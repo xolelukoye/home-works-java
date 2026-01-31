@@ -12,7 +12,7 @@ public class Person {
         this.ssn = someSsn;
     }
 
-    String getFirstNameName() {
+    String getFirstName() {
         return this.firstName;
     }
 

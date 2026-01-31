@@ -7,15 +7,15 @@ import java.util.ListIterator;
 public class Task2 {
     public static void main(String[] args) {
 
-        LinkedList<Integer> listOgNumbers = new LinkedList<>();
+        LinkedList<Integer> listOfNumbers = new LinkedList<>();
 
         for (int i = 0; i < 6; i++) {
-            listOgNumbers.add(i +1);
+            listOfNumbers.add(i +1);
         }
 
-        System.out.println("Первоначальный список: " + listOgNumbers);
+        System.out.println("Первоначальный список: " + listOfNumbers);
 
-        ListIterator<Integer> iterator = listOgNumbers.listIterator();
+        ListIterator<Integer> iterator = listOfNumbers.listIterator();
 
         System.out.print("Проход туда: ");
         while (iterator.hasNext()) {
