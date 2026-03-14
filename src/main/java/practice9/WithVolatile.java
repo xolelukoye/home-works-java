@@ -21,7 +21,6 @@ public class WithVolatile {
         Thread thread = new Thread(() -> {
             while (!withVolatile.stop) {
                 withVolatile.counter++;
-                System.out.println("Значение счетчика: " + withVolatile.counter);
             }
             System.out.println("Рабочий поток завершен, итоговое значение счетчика: " + withVolatile.counter);
         });
@@ -32,7 +31,7 @@ public class WithVolatile {
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
-            System.out.println("Ошибка: " + e);
+            System.out.println(e.getMessage());
         }
 
         withVolatile.stop();

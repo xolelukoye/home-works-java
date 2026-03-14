@@ -13,7 +13,7 @@ public class PrintA extends Thread {
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {
-                System.out.println("Ошибка: " + e);
+                System.out.println(e.getMessage());
             }
         }
     }
