@@ -1,3 +1,5 @@
+package practice10;
+
 import org.junit.jupiter.api.Test;
 
 import java.util.NoSuchElementException;

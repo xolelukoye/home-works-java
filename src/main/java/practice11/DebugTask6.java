@@ -8,10 +8,11 @@ public class DebugTask6 {
         countdown(5);
     }
     public static void countdown(int n) {
-        while (n >= 1) {
-        System.out.println(n);
-        n--;
+        if (n <= 0) {
+            return;
         }
+        System.out.println(n);
+        countdown(n - 1);
     }
-
 }
+

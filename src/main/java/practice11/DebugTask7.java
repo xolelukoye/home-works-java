@@ -2,6 +2,8 @@ package practice11;
 
 // Два потока списывают деньги со счёта одновременно, но почему-то баланс становится отрицательным.
 
+import java.sql.SQLOutput;
+
 public class DebugTask7 {
 
     private static int balance = 100;
@@ -19,6 +21,8 @@ public class DebugTask7 {
             try { Thread.sleep(100); } catch (InterruptedException e) { }
             balance -= amount;
             System.out.println("New balance: " + balance);
+        } else {
+            System.out.println("Insufficient funds for amount: " + balance);
         }
     }
 

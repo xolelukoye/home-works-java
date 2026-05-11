@@ -1,5 +1,6 @@
+package practice10;
+
 import org.junit.jupiter.api.BeforeEach;
-import practice10.SetOfMethods;
 
 public class BaseTest {
 
