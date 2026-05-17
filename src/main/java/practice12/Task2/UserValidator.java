@@ -32,8 +32,6 @@ public class UserValidator {
         }
         if (!Character.isUpperCase(name.charAt(0))) {
             throw new InvalidUserException("Ошибка! Имя должно начинаться с большой буквы");
-        } else {
-            System.out.println("Валидация имени пользователя прошла успешно");
         }
     }
 
@@ -43,12 +41,14 @@ public class UserValidator {
         }
         if (age > 100) {
             throw new InvalidUserException("Ошибка! Возраст не должен быть старше 100 лет");
-        } else {
-            System.out.println("Валидация возраста пользователя прошла успешно");
         }
     }
 
     void validateEmail(String email) {
+
+        if (email == null) {
+            throw new InvalidUserException("Ошибка! Email не может быть null");
+        }
 
         String regex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$";
 

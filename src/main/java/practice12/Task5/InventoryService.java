@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
  * Фильтрация товаров по цене с использованием лямбда-выражений.
  */
 
-public class InvetoryService {
+public class InventoryService {
 
     private Map<String, List<Product>> inventory = new HashMap<>();
     private boolean isInventoryOpen = true;

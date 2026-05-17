@@ -41,7 +41,6 @@ public class GradeService<T extends Number> {
         }
 
         if (count == 0) {
-            System.out.println("Нет оценок по предмету: " + subject);
             return 0;
         }
 

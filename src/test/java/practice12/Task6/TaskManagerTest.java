@@ -14,7 +14,9 @@ package practice12.Task6;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.time.LocalDate;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -48,7 +50,7 @@ public class TaskManagerTest {
         manager.addTask(task1);
         manager.removeTask("1");
 
-        assertTrue(manager.findByStatus("oopen").isEmpty());
+        assertTrue(manager.findByStatus("open").isEmpty());
     }
 
     @Test
@@ -80,7 +82,7 @@ public class TaskManagerTest {
 
         List<Task<String>> list = manager.sortByDateAsc();
 
-        assertEquals("1", list.get(0).getID());
+        assertEquals("1", list.get(0).getId());
     }
 
     @Test
@@ -91,7 +93,7 @@ public class TaskManagerTest {
 
         List<Task<String>> list = manager.sortByDateDesc();
 
-        assertEquals("2", list.get(0).getID());
+        assertEquals("2", list.get(0).getId());
     }
 
     @Test

@@ -7,31 +7,31 @@ import java.time.LocalDate;
 
 public class Task<T> {
 
-    private final T ID;
-    private final String STATUS;
-    private final int PRIORITY;
-    private final LocalDate DATE;
+    private final T id;
+    private final String status;
+    private final int priority;
+    private final LocalDate date;
 
-    public Task(T ID, String STATUS, int PRIORITY, LocalDate DATE) {
-        this.ID = ID;
-        this.STATUS = STATUS;
-        this.PRIORITY = PRIORITY;
-        this.DATE = DATE;
+    public Task(T id, String status, int priority, LocalDate date) {
+        this.id = id;
+        this.status = status;
+        this.priority = priority;
+        this.date = date;
     }
 
-    public T getID() {
-        return ID;
+    public T getId() {
+        return id;
     }
 
-    public String getSTATUS() {
-        return STATUS;
+    public String getStatus() {
+        return status;
     }
 
-    public int getPRIORITY() {
-        return PRIORITY;
+    public int getPriority() {
+        return priority;
     }
 
-    public LocalDate getDATE() {
-        return DATE;
+    public LocalDate getDate() {
+        return date;
     }
 }

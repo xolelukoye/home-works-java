@@ -19,40 +19,40 @@ public class TaskManager<T> {
     private final Map<T, Task<T>> tasks = new HashMap<>();
 
     public void addTask(Task<T> task) {
-        if (tasks.containsKey(task.getID())) {
+        if (tasks.containsKey(task.getId())) {
             throw new IllegalArgumentException("Задача с таким ID уже есть");
         }
-        tasks.put(task.getID(), task);
+        tasks.put(task.getId(), task);
     }
 
-    public synchronized void removeTask(T ID) {
-        if (!tasks.containsKey(ID)) {
+    public synchronized void removeTask(T id) {
+        if (!tasks.containsKey(id)) {
             throw new NoSuchElementException("Задача не найдена");
         }
-        tasks.remove(ID);
+        tasks.remove(id);
     }
 
-    public List<Task<T>> findByStatus(String STATUS) {
+    public List<Task<T>> findByStatus(String status) {
         return tasks.values().stream()
-                .filter(t -> t.getSTATUS() == STATUS)
+                .filter(t -> t.getStatus().equals(status))
                 .collect(Collectors.toList());
     }
 
-    public List<Task<T>> findByPriority(int PRIORITY) {
+    public List<Task<T>> findByPriority(int priority) {
         return tasks.values().stream()
-                .filter(t -> t.getPRIORITY() == PRIORITY)
+                .filter(t -> t.getPriority() == priority)
                 .collect(Collectors.toList());
     }
 
     public List<Task<T>> sortByDateAsc() {
         return tasks.values().stream()
-                .sorted(Comparator.comparing(Task::getDATE))
+                .sorted(Comparator.comparing(Task::getDate))
                 .collect(Collectors.toList());
     }
 
     public List<Task<T>> sortByDateDesc() {
         return tasks.values().stream()
-                .sorted(Comparator.comparing((Task<T> t) -> t.getDATE()).reversed())
+                .sorted(Comparator.comparing((Task<T> t) -> t.getDate()).reversed())
                 .collect(Collectors.toList());
     }
 

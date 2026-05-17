@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        InvetoryService invetoryService = new InvetoryService();
+        InventoryService invetoryService = new InventoryService();
 
         invetoryService.addProduct(new Product("Ноутбук", "Электроника", 69000));
         invetoryService.addProduct(new Product("Смартфон", "Электроника", 37900));
